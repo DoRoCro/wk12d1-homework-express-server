@@ -10,7 +10,7 @@ app.get('/', function (req, res) {
 })
 
 app.use(express.static('client/build'))
-// app.use(require('./client/src/controllers'))                // says look for index.js in controllers directory.
+app.use(require('./client/src/controllers'))                // says look for index.js in controllers directory.
 // app.use(require('./client/src/models'))                // says look for index.js in controllers directory.
 
 var server = app.listen(3000, function () {
